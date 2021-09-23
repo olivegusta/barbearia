@@ -10,7 +10,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  final int _counter = 0;
 
   //void _incrementCounter() {
   //  setState(() {
@@ -27,13 +27,39 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'APERTE PARA AGENDAR UM SERVIÇO!!!',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+          children: [
+            //Parte da cabeça do robô
+            Container(color: Colors.black, width: 50.0, height: 50.0),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  color: Colors.purple,
+                  width: 50.0,
+                  height: 50.0,
+                ),
+
+                Container(
+                  color: Colors.indigo,
+                  width: 100.0,
+                  height: 100.0,
+                ),
+
+                Container(
+                  color: Colors.purple,
+                  width: 50.0,
+                  height: 50.0,
+                ),
+
+                //const Text(
+                //  'APERTE PARA AGENDAR UM SERVIÇO!!!',
+                //),
+                //Text(
+                //'$_counter',
+                //style: Theme.of(context).textTheme.headline4,
+                //),
+              ],
             ),
           ],
         ),
