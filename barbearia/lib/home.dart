@@ -34,51 +34,34 @@ class _MyHomePageState extends State<MyHomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                //   Container(
-                //   color: Colors.purple,
-                // width: 50.0,
-                //height: 50.0,
-                //),
-
-                //Container(
-                //color: Colors.indigo,
-                //width: 100.0,
-                //height: 100.0,
-                //),
-
                 Container(
-                  color: Colors.purple,
-                  width: 50.0,
-                  height: 50.0,
+                  color: Colors.black,
+                  width: 300.0,
+                  height: 300.0,
+                  child: Center(
+                    child: Container(
+                      color: Colors.white,
+                      width: 200.0,
+                      height: 200.0,
+                      child: Center(child: Text("Login")),
+                    ),
+                  ),
                 ),
-
-                //const Text(
-                //  'APERTE PARA AGENDAR UM SERVIÇO!!!',
-                //),
-                //Text(
-                //'$_counter',
-                //style: Theme.of(context).textTheme.headline4,
-                //),
               ],
             ),
 
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(color: Colors.black, width: 50.0, height: 50.0),
-                SizedBox(
-                  width: 20,
-                ),
-                Container(color: Colors.red, width: 40.0, height: 50.0),
-              ],
-            ),
+            //Row(
+            //mainAxisAlignment: MainAxisAlignment.center,
+            //children: [
+            //Container(color: Colors.black, width: 50.0, height: 50.0),
+            //SizedBox(
+            // width: 20,
+            //),
+            //Container(color: Colors.red, width: 40.0, height: 50.0),
           ],
         ),
+        //],
       ),
-      //floatingActionButton: FloatingActionButton(
-      //onPressed: _incrementCounter,
-      //tooltip: 'Increment',
-      //child: const Icon(Icons.add),
       //),
     );
   }
