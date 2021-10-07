@@ -29,22 +29,22 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             //Parte da cabeça do robô
-            Container(color: Colors.black, width: 50.0, height: 50.0),
+            // Container(color: Colors.black, width: 50.0, height: 50.0),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Container(
-                  color: Colors.purple,
-                  width: 50.0,
-                  height: 50.0,
-                ),
+                //   Container(
+                //   color: Colors.purple,
+                // width: 50.0,
+                //height: 50.0,
+                //),
 
-                Container(
-                  color: Colors.indigo,
-                  width: 100.0,
-                  height: 100.0,
-                ),
+                //Container(
+                //color: Colors.indigo,
+                //width: 100.0,
+                //height: 100.0,
+                //),
 
                 Container(
                   color: Colors.purple,
