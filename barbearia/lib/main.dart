@@ -1,3 +1,6 @@
+import 'dart:html';
+
+import 'package:barbearia/login.dart';
 import 'package:flutter/material.dart';
 
 import 'home.dart';
@@ -17,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Agendamento Barbearia'),
+      home: MyLogin(title: "Agendamento!!"),
     );
   }
 }

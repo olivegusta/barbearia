@@ -28,9 +28,6 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            //Parte da cabeça do robô
-            // Container(color: Colors.black, width: 50.0, height: 50.0),
-
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -49,15 +46,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ],
             ),
-
-            //Row(
-            //mainAxisAlignment: MainAxisAlignment.center,
-            //children: [
-            //Container(color: Colors.black, width: 50.0, height: 50.0),
-            //SizedBox(
-            // width: 20,
-            //),
-            //Container(color: Colors.red, width: 40.0, height: 50.0),
           ],
         ),
         //],
