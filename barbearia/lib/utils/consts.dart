@@ -5,11 +5,11 @@ import 'package:flutter/material.dart';
 import 'common.dart';
 
 class AppConsts {
-  // static double heightSize;
+  //static double heightSize;
   //static double widthSize;
 
-  static double heightPercentage = 10;
-  static double widthPercentage = 10;
+  static double heightPercentage = 100;
+  static double widthPercentage = 140;
 
   static const double xdHeightSize = 667.0;
   static const double xdWidhtSize = 375.0;

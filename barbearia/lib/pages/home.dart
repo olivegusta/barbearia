@@ -1,3 +1,4 @@
+import 'package:barbearia/utils/common.dart';
 import 'package:barbearia/utils/consts.dart';
 import 'package:flutter/material.dart';
 
@@ -29,14 +30,14 @@ Widget bandeiraBeldica() {
     children: [
       faixa(cor: AppConsts.black),
       faixa(cor: AppConsts.yellowBasic),
-      faixa(cor: AppConsts.yellowBasic)
+      faixa(cor: AppConsts.redBasic)
     ],
   );
 }
 
 Widget faixa({cor}) {
-  final double h = 200;
-  final double l = 100;
+  final double h = (250.0);
+  final double l = (120.0);
 
   return Container(
     height: h,
