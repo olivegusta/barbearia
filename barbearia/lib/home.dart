@@ -10,47 +10,36 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final int _counter = 0;
-
-  //void _incrementCounter() {
-  //  setState(() {
-  //    _counter++;
-  //  });
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Container(
-                  color: Colors.black,
-                  width: 300.0,
-                  height: 300.0,
-                  child: Center(
-                    child: Container(
-                      color: Colors.white,
-                      width: 200.0,
-                      height: 200.0,
-                      child: Center(child: Text("Login")),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-        //],
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [bandeiraBeldica()]),
       ),
-      //),
     );
   }
+}
+
+Widget bandeiraBeldica() {
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      faixa(Colors.black),
+      faixa(Colors.yellow),
+      faixa(Colors.redAccent)
+    ],
+  );
+}
+
+Widget faixa(Color cor) {
+  final double h = 200;
+  final double l = 100;
+
+  return Container(
+    height: h,
+    width: l,
+    color: cor,
+  );
 }
