@@ -28,7 +28,7 @@ class AppConsts {
 
   // Back Ground Colors
 
-  static Color backgroundColor = const Color(0xff484848);
+  static Color backgroundColor = const Color(0xff7b6cf6);
   static Color appbarBackgroundColor = const Color(0xff484848);
 
   // Cores básicas

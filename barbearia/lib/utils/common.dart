@@ -41,7 +41,7 @@ Widget faixa({cor}) {
 }
 
 Widget botao(
-    {texto, pathImage, action, double maxWidth = 344, bool disabled = false}) {
+    {texto, pathImage, action, double maxWidth = 200, bool disabled = false}) {
   return Padding(
     padding: EdgeInsets.symmetric(vertical: setHeight(5.0)),
     child: Container(
@@ -54,25 +54,23 @@ Widget botao(
             borderRadius: BorderRadius.circular(AppConsts.radiusBotton)),
         child: Row(
           children: [
-            CircleAvatar(
-              backgroundColor: AppConsts.backgroundColor,
-              maxRadius: setHeight(16),
-              child: Image.asset(
-                pathImage,
-                height: setHeight(18),
-                color: AppConsts.backgroundColor,
-              ),
-            ),
+            //CircleAvatar(
+            //backgroundColor: AppConsts.backgroundColor,
+            //maxRadius: setHeight(16),
+            //child: Image.asset(
+            //pathImage,
+            //height: setHeight(18),
+            //color: AppConsts.backgroundColor,
+            //),
+            //),
             SizedBox(width: setWidth(10.0)),
-            Container(
-              constraints:
-                  BoxConstraints(maxWidth: setWidth(maxWidth - 10 - 32 - 10)),
+            Center(
               child: Text(
                 texto.toUpperCase(),
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   color: disabled ? AppConsts.offText : AppConsts.onText,
-                  fontSize: AppConsts.fontSize10,
+                  fontSize: AppConsts.fontSize16,
                   fontWeight: FontWeight.w700,
                 ),
               ),

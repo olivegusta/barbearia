@@ -1,7 +1,9 @@
 import 'dart:js';
 
+import 'package:barbearia/utils/common.dart';
 import 'package:barbearia/utils/consts.dart';
 import 'package:flutter/material.dart';
+import 'package:barbearia/utils/common.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key, required this.title}) : super(key: key);
@@ -30,10 +32,15 @@ class _LoginState extends State<Login> {
               "Seu email:",
               style: AppConsts.styleTitle,
             ),
-            Text(
-              "Sua senha: ",
-              style: AppConsts.styleTitle,
-            )
+            Text("Sua senha: ", style: AppConsts.styleTitle),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: setWidth(148)),
+              child: botao(
+                  action: () => print("Apertei"),
+                  texto: "ENTRAR",
+                  maxWidth: setWidth(200),
+                  disabled: false),
+            ),
           ],
         ),
       ),
