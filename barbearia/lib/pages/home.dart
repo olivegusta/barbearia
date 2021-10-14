@@ -14,6 +14,8 @@ class home extends StatefulWidget {
 class _homeState extends State<home> {
   @override
   Widget build(BuildContext context) {
+    AppConsts.setWidhtSize(MediaQuery.of(context).size.width);
+    AppConsts.setHeightSize(MediaQuery.of(context).size.height);
     return Scaffold(
       body: Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [

@@ -18,6 +18,28 @@ double setHeight(double value) {
 // AppConsts.setWidhtSize(MediaQuery.of(context).size.width);
 // AppConsts.setHeightSize(MediaQuery.of(context).size.height);
 
+Widget bandeiraBeldica() {
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      faixa(cor: AppConsts.black),
+      faixa(cor: AppConsts.yellowBasic),
+      faixa(cor: AppConsts.redBasic)
+    ],
+  );
+}
+
+Widget faixa({cor}) {
+  final double h = (250.0);
+  final double l = (120.0);
+
+  return Container(
+    height: h,
+    width: l,
+    color: cor,
+  );
+}
+
 Widget botao(
     {texto, pathImage, action, double maxWidth = 344, bool disabled = false}) {
   return Padding(

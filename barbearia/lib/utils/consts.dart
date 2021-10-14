@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'common.dart';
 
 class AppConsts {
-  //static double heightSize;
-  //static double widthSize;
+  static double heightSize = 0;
+  static double widthSize = 0;
 
   static double heightPercentage = 100;
   static double widthPercentage = 140;
@@ -15,13 +15,13 @@ class AppConsts {
   static const double xdWidhtSize = 375.0;
 
   static void setHeightSize(double size) {
-    //heightSize = size;
-    //heightPercentage = heightSize / xdHeightSize;
+    heightSize = size;
+    heightPercentage = heightSize / xdHeightSize;
   }
 
   static void setWidhtSize(double size) {
-    //widthSize = size;
-    //widthPercentage = widthSize / xdWidhtSize;
+    widthSize = size;
+    widthPercentage = widthSize / xdWidhtSize;
   }
 
   static double radiusBotton = 50;
@@ -44,18 +44,19 @@ class AppConsts {
   static Color offColor = const Color(0xff484848);
   static Color onBottom = const Color(0xffffffdd);
   static Color offBottom = const Color(0xffffdddd);
-  static Color onText = const Color(0xffffffff);
+  static Color onText = const Color(0xff000000);
   static Color offText = const Color(0xffffffdd);
 
   static double fontSize08 = setWidth(8.0);
   static double fontSize09 = setWidth(9.0);
   static double fontSize10 = setWidth(10.0);
-
+  static double fontSize16 = setWidth(16.0);
+  static double fontSize18 = setWidth(18.0);
+  static double fontSize24 = setWidth(24.0);
   static TextStyle styleTitle = TextStyle(
-    color: AppConsts.black,
-    fontWeight: FontWeight.w600,
-    fontSize: AppConsts.fontSize10,
-  );
+      color: AppConsts.onText,
+      fontWeight: FontWeight.w600,
+      fontSize: AppConsts.fontSize24);
 
   static double topHeight = 10.0;
 }
