@@ -64,15 +64,13 @@ Widget botao(
             //),
             //),
             SizedBox(width: setWidth(10.0)),
-            Center(
-              child: Text(
-                texto.toUpperCase(),
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                  color: disabled ? AppConsts.offText : AppConsts.onText,
-                  fontSize: AppConsts.fontSize16,
-                  fontWeight: FontWeight.w700,
-                ),
+            Text(
+              texto.toUpperCase(),
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                color: disabled ? AppConsts.offText : AppConsts.onText,
+                fontSize: AppConsts.fontSize16,
+                fontWeight: FontWeight.w700,
               ),
             ),
           ],

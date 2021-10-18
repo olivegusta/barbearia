@@ -12,11 +12,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Agendamento Barbearia',
+      title: 'Login ',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Login(title: "Agendamento!!"),
+      home: Login(title: "Login"),
     );
   }
 }
