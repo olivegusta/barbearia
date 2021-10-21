@@ -1,3 +1,4 @@
+import 'package:barbearia/pages/calander.dart';
 import 'package:barbearia/pages/login.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Login(title: "Login"),
+      initialRoute: LoginPage.tag,
+      routes: {
+        LoginPage.tag: (context) => LoginPage(),
+      },
     );
   }
 }
