@@ -17,9 +17,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: LoginPage.tag,
+      initialRoute: '/login',
       routes: {
-        LoginPage.tag: (context) => LoginPage(),
+        '/login': (context) => LoginPage(),
+        '/calander': (context) => CalanderPage(),
+
+        //LoginPage.tag: (context) => LoginPage(),
       },
     );
   }
