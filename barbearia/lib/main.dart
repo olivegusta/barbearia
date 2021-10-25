@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/login',
       routes: {
         '/login': (context) => LoginPage(),
-        '/calander': (context) => CalanderPage(),
+        '/calander': (context) => CalanderPage(nome: "Diego"),
 
         //LoginPage.tag: (context) => LoginPage(),
       },

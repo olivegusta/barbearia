@@ -33,7 +33,10 @@ Widget corpo(BuildContext context) {
         child: OutlinedButton.icon(
             onPressed: () {
               print("apertei o botão");
-              Navigator.of(context).pushReplacementNamed("/calander");
+              Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => CalanderPage(
+                        nome: "Diego",
+                      )));
             },
             icon: Icon(
               Icons.login,
