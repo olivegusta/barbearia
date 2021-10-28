@@ -24,25 +24,10 @@ class _CalanderPageState extends State<CalanderPage> {
   }
 
   Widget corpo() {
-    return Container(
-      //color: AppConsts.backgroundColor,
-      child: Center(
-        child: Container(
-          color: AppConsts.offBottom,
-          width: setWidth(200.0),
-          height: setHeight(80.0),
-          child: OutlinedButton.icon(
-              onPressed: () {
-                print("voltar para o login");
-                Navigator.of(context).pushReplacementNamed("/login");
-              },
-              icon: Icon(
-                Icons.logout,
-                size: setHeight(10.0),
-              ),
-              label: Text(widget.nome)),
-        ),
-      ),
-    );
+    return Container();
   }
+}
+
+Widget _botao() {
+  return botao(texto: "salvar", action: () => print("Hora de salvar"));
 }

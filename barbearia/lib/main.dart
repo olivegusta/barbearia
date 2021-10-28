@@ -1,3 +1,4 @@
+import 'package:barbearia/pages/cadastro.dart';
 import 'package:barbearia/pages/calander.dart';
 import 'package:barbearia/pages/login.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/login',
       routes: {
         '/login': (context) => LoginPage(),
-        '/calander': (context) => CalanderPage(nome: "Diego"),
+        '/cadastro': (context) => cadastroPage(nome: "voltar para o login"),
 
         //LoginPage.tag: (context) => LoginPage(),
       },

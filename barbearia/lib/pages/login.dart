@@ -2,9 +2,10 @@ import 'package:barbearia/pages/calander.dart';
 import 'package:barbearia/utils/common.dart';
 import 'package:barbearia/utils/consts.dart';
 import 'package:flutter/material.dart';
+import 'package:barbearia/pages/cadastro.dart';
 
 class LoginPage extends StatefulWidget {
-  static String tag = 'login';
+  static String tag = 'cadastro';
   const LoginPage({key}) : super(key: key);
 
   @override
@@ -34,7 +35,7 @@ Widget corpo(BuildContext context) {
             onPressed: () {
               print("apertei o botão");
               Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => CalanderPage(
+                  builder: (context) => cadastroPage(
                         nome: "Diego",
                       )));
             },

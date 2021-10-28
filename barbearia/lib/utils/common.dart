@@ -40,8 +40,7 @@ Widget faixa({cor}) {
   );
 }
 
-Widget botao(
-    {texto, pathImage, action, double maxWidth = 200, bool disabled = false}) {
+Widget botao({texto, action, double maxWidth = 200, bool disabled = false}) {
   return Padding(
     padding: EdgeInsets.symmetric(vertical: setHeight(5.0)),
     child: Container(
@@ -53,16 +52,8 @@ Widget botao(
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(AppConsts.radiusBotton)),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            //CircleAvatar(
-            //backgroundColor: AppConsts.backgroundColor,
-            //maxRadius: setHeight(16),
-            //child: Image.asset(
-            //pathImage,
-            //height: setHeight(18),
-            //color: AppConsts.backgroundColor,
-            //),
-            //),
             SizedBox(width: setWidth(10.0)),
             Text(
               texto.toUpperCase(),
