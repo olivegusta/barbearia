@@ -50,13 +50,19 @@ class AppConsts {
   static double fontSize08 = setWidth(8.0);
   static double fontSize09 = setWidth(9.0);
   static double fontSize10 = setWidth(10.0);
+  static double fontSize12 = setWidth(12.0);
   static double fontSize16 = setWidth(16.0);
   static double fontSize18 = setWidth(18.0);
   static double fontSize24 = setWidth(24.0);
+
   static TextStyle styleTitle = TextStyle(
-      color: AppConsts.onText,
+      //color: AppConsts.onText,
       fontWeight: FontWeight.w600,
       fontSize: AppConsts.fontSize24);
 
-  static double topHeight = 10.0;
+  static TextStyle textLabel = TextStyle(
+    color: Colors.black,
+    fontSize: AppConsts.fontSize12,
+    height: 1.5,
+  );
 }

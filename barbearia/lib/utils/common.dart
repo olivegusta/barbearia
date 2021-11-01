@@ -70,3 +70,9 @@ Widget botao({texto, action, double maxWidth = 200, bool disabled = false}) {
     ),
   );
 }
+
+Widget labelGenerico(String string, {required Color textColor}) {
+  TextStyle textStyle = (textColor == null)
+      ? AppConsts.textLabel
+      : AppConsts.textLabel.copyWith(color: textColor);
+}

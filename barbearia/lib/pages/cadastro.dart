@@ -45,7 +45,14 @@ class _cadastroPageState extends State<cadastroPage> {
 }
 
 Widget _formulario() {
-  return Text("oie daqui a pouco tem um formuldario aqui!!!");
+  return Column(
+    children: [
+      Text("Nome"),
+      Text("Email"),
+      Text("Telefone"),
+      Text("Data de Nascimento"),
+    ],
+  );
 }
 
 Widget _botoes() {
