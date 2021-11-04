@@ -2,6 +2,7 @@ import 'package:barbearia/pages/login.dart';
 import 'package:barbearia/utils/common.dart';
 import 'package:barbearia/utils/consts.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class cadastroPage extends StatefulWidget {
   final String nome;
@@ -13,6 +14,8 @@ class cadastroPage extends StatefulWidget {
 }
 
 class _cadastroPageState extends State<cadastroPage> {
+  final TextEditingController _nameCtrl = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     AppConsts.setWidhtSize(MediaQuery.of(context).size.width);
@@ -46,11 +49,12 @@ class _cadastroPageState extends State<cadastroPage> {
 
 Widget _formulario() {
   return Column(
+    crossAxisAlignment: CrossAxisAlignment.center,
     children: [
-      Text("Nome"),
-      Text("Email"),
-      Text("Telefone"),
-      Text("Data de Nascimento"),
+      labelGenerico("Nome"),
+      //labelGenerico("Email"),
+      //  Text("Telefone"),
+      //  Text("Data de Nascimento"),
     ],
   );
 }
@@ -67,5 +71,33 @@ Widget _botoes() {
       //action: () => print("Hora de enviar"),
       //),
     ],
+  );
+}
+
+Widget _nameContainer() {
+  return TextFormField(
+    textCapitalization: TextCapitalization.words,
+    textInputAction: TextInputAction.next,
+    controller: _namefinal,
+    keyboardType: TextInputType.text,
+    decoration: InputDecoration(
+      enabledBorder: UnderlineInputBorder(
+        borderSide: BorderSide(color: Colors.white),
+      ),
+    ),
+    inputFormatters: [
+      FilteringTextInputFormatter.allow(RegExp("[0-9a-zA-Z.ãÃçÇ& ]"))
+    ],
+    validator: (value) {
+      if (value!.isEmpty) {
+        return 'Precisamos de um nome para conta.';
+      } else if (value.length < 5) {
+        return 'Precisamos de no minimo 5 caracteres.';
+      }
+      return null;
+    },
+    onChanged: (value) {
+      print(_nameCtrl.text);
+    },
   );
 }
