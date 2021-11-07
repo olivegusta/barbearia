@@ -4,6 +4,8 @@ import 'package:barbearia/utils/consts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+final TextEditingController _nameCtrl = TextEditingController();
+
 class cadastroPage extends StatefulWidget {
   final String nome;
   static String tag = 'cadastro';
@@ -14,8 +16,6 @@ class cadastroPage extends StatefulWidget {
 }
 
 class _cadastroPageState extends State<cadastroPage> {
-  final TextEditingController _nameCtrl = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     AppConsts.setWidhtSize(MediaQuery.of(context).size.width);
@@ -49,9 +49,10 @@ class _cadastroPageState extends State<cadastroPage> {
 
 Widget _formulario() {
   return Column(
-    crossAxisAlignment: CrossAxisAlignment.center,
+    crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       labelGenerico("Nome"),
+      _nameContainer(),
       //labelGenerico("Email"),
       //  Text("Telefone"),
       //  Text("Data de Nascimento"),
@@ -78,7 +79,7 @@ Widget _nameContainer() {
   return TextFormField(
     textCapitalization: TextCapitalization.words,
     textInputAction: TextInputAction.next,
-    controller: _namefinal,
+    controller: _nameCtrl,
     keyboardType: TextInputType.text,
     decoration: InputDecoration(
       enabledBorder: UnderlineInputBorder(
