@@ -3,26 +3,36 @@ import 'package:barbearia/utils/common.dart';
 import 'package:barbearia/utils/consts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
+import 'dart:js';
 
 final TextEditingController _nameCtrl = TextEditingController();
+late DateTime _birthDate;
 
-class cadastroPage extends StatefulWidget {
+class TimelinePage extends StatefulWidget {
   final String nome;
   static String tag = 'cadastro';
-  const cadastroPage({required this.nome, Key? key}) : super(key: key);
+  const TimelinePage({required this.nome, Key? key}) : super(key: key);
 
   @override
-  _cadastroPageState createState() => _cadastroPageState();
+  _TimelinePageState createState() => _TimelinePageState();
 }
 
-class _cadastroPageState extends State<cadastroPage> {
+class _TimelinePageState extends State<TimelinePage> {
+  @override
+  void iniState() {
+    _birthDate = DateTime.now();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     AppConsts.setWidhtSize(MediaQuery.of(context).size.width);
     AppConsts.setHeightSize(MediaQuery.of(context).size.height);
+
     return Scaffold(
       appBar: AppBar(
-        title: Text('Cadastro', textAlign: TextAlign.center),
+        title: Text('Barber_Shop', textAlign: TextAlign.center),
       ),
       body: corpo(),
     );
@@ -32,14 +42,14 @@ class _cadastroPageState extends State<cadastroPage> {
     return Container(
       padding: EdgeInsets.symmetric(
           horizontal: setWidth(24), vertical: setHeight(24)),
-      //color: AppConsts.backgroundColor,
+      color: AppConsts.backgroundColor,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           SizedBox(
             height: setHeight(50),
           ),
-          _formulario(),
+          //_formulario(),
           _botoes(),
         ],
       ),
@@ -47,25 +57,27 @@ class _cadastroPageState extends State<cadastroPage> {
   }
 }
 
-Widget _formulario() {
-  return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      labelGenerico("Nome"),
-      _nameContainer(),
-      //labelGenerico("Email"),
-      //  Text("Telefone"),
-      //  Text("Data de Nascimento"),
-    ],
-  );
-}
+//Widget _formulario() {
+//return Column(
+//  crossAxisAlignment: CrossAxisAlignment.start,
+//  children: [
+//   labelGenerico("Nome"),
+//   _nameContainer(),
+//labelGenerico("Email"),
+//  Text("Telefone"),
+//  Text("Data de Nascimento"),
+//_dateContainer(),
+// ],
+//);
+//}
 
 Widget _botoes() {
   return Column(
     children: [
       botao(
-        texto: "salvar",
-        action: () => print("Hora de salvar"),
+        texto: "Agendar serviços",
+
+        //action:
       ),
       //botao(
       //texto: "enviar",

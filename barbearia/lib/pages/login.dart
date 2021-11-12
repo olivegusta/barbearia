@@ -1,8 +1,9 @@
-import 'package:barbearia/pages/calander.dart';
+//import 'package:barbearia/pages/calander.dart';
+import 'package:barbearia/pages/agendamento.dart';
 import 'package:barbearia/utils/common.dart';
 import 'package:barbearia/utils/consts.dart';
 import 'package:flutter/material.dart';
-import 'package:barbearia/pages/cadastro.dart';
+import 'package:barbearia/pages/Timeline.dart';
 
 class LoginPage extends StatefulWidget {
   static String tag = 'cadastro';
@@ -35,7 +36,7 @@ Widget corpo(BuildContext context) {
             onPressed: () {
               print("apertei o botão");
               Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => cadastroPage(
+                  builder: (context) => TimelinePage(
                         nome: "Diego",
                       )));
             },

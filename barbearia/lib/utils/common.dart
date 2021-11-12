@@ -48,7 +48,7 @@ Widget botao({texto, action, double maxWidth = 200, bool disabled = false}) {
       child: RaisedButton(
         onPressed: () => disabled ? Container() : action(),
         padding: EdgeInsets.symmetric(horizontal: setHeight(5.0)),
-        color: AppConsts.backgroundColor,
+        color: AppConsts.onColor,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(AppConsts.radiusBotton)),
         child: Row(
