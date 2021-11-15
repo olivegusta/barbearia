@@ -18,34 +18,35 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     AppConsts.setWidhtSize(MediaQuery.of(context).size.width);
     AppConsts.setHeightSize(MediaQuery.of(context).size.height);
-    return Scaffold(
-      body: corpo(context),
+    return Scaffold(body: corpo());
+  }
+
+  Widget corpo() {
+    return Container(
+      color: AppConsts.backgroundColor,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisSize: MainAxisSize.max,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Center(
+              child: Image.asset('lib/images/logo.png', width: setWidth(200))),
+          Container(
+            width: setWidth(200.0),
+            child: botao(
+                texto: "enter",
+                action: () {
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(
+                      builder: (context) => TimelinePage(
+                        nome: '',
+                      ),
+                    ),
+                  );
+                }),
+          ),
+        ],
+      ),
     );
   }
-}
-
-Widget corpo(BuildContext context) {
-  return Container(
-    color: AppConsts.backgroundColor,
-    child: Center(
-      child: Container(
-        color: AppConsts.offBottom,
-        width: setWidth(200.0),
-        height: setHeight(80.0),
-        child: OutlinedButton.icon(
-            onPressed: () {
-              print("apertei o botão");
-              Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => TimelinePage(
-                        nome: "Diego",
-                      )));
-            },
-            icon: Icon(
-              Icons.login,
-              size: setHeight(10.0),
-            ),
-            label: Text("Login")),
-      ),
-    ),
-  );
 }

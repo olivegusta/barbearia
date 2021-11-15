@@ -1,3 +1,6 @@
+import 'dart:html';
+
+import 'package:barbearia/pages/agendamento.dart';
 import 'package:barbearia/pages/login.dart';
 import 'package:barbearia/utils/common.dart';
 import 'package:barbearia/utils/consts.dart';
@@ -32,7 +35,7 @@ class _TimelinePageState extends State<TimelinePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Barber_Shop', textAlign: TextAlign.center),
+        title: const Text('Barber_Shop', textAlign: TextAlign.center),
       ),
       body: corpo(),
     );
@@ -49,7 +52,7 @@ class _TimelinePageState extends State<TimelinePage> {
           SizedBox(
             height: setHeight(50),
           ),
-          //_formulario(),
+          _formulario(),
           _botoes(),
         ],
       ),
@@ -57,34 +60,25 @@ class _TimelinePageState extends State<TimelinePage> {
   }
 }
 
-//Widget _formulario() {
-//return Column(
-//  crossAxisAlignment: CrossAxisAlignment.start,
-//  children: [
-//   labelGenerico("Nome"),
-//   _nameContainer(),
-//labelGenerico("Email"),
-//  Text("Telefone"),
-//  Text("Data de Nascimento"),
-//_dateContainer(),
-// ],
-//);
-//}
+Widget _formulario() {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      labelGenerico("Nome"),
+      _nameContainer(),
+      labelGenerico("Email"),
+      _nameContainer(),
+      // Text("Telefone"),
+      labelGenerico("Data de Nascimento"),
+    ],
+  );
+}
 
 Widget _botoes() {
   return Column(
-    children: [
-      botao(
-        texto: "Agendar serviços",
-
-        //action:
-      ),
-      //botao(
-      //texto: "enviar",
-      //action: () => print("Hora de enviar"),
-      //),
-    ],
+    children: [],
   );
+  ;
 }
 
 Widget _nameContainer() {
