@@ -40,7 +40,12 @@ Widget faixa({cor}) {
   );
 }
 
-Widget botao({texto, action, double maxWidth = 200, bool disabled = false}) {
+Widget botao({
+  texto,
+  action,
+  double maxWidth = 100,
+  bool disabled = false,
+}) {
   return Padding(
     padding: EdgeInsets.symmetric(vertical: setHeight(5.0)),
     child: Container(
@@ -48,9 +53,8 @@ Widget botao({texto, action, double maxWidth = 200, bool disabled = false}) {
       child: RaisedButton(
         onPressed: () => disabled ? Container() : action(),
         padding: EdgeInsets.symmetric(horizontal: setHeight(5.0)),
-        color: AppConsts.onColor,
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(AppConsts.radiusBotton)),
+        color: Colors.blue.shade900,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.horizontal()),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

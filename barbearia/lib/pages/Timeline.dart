@@ -45,14 +45,14 @@ class _TimelinePageState extends State<TimelinePage> {
     return Container(
       padding: EdgeInsets.symmetric(
           horizontal: setWidth(24), vertical: setHeight(24)),
-      color: AppConsts.backgroundColor,
+      // color: AppConsts.backgroundColor,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           SizedBox(
             height: setHeight(50),
           ),
-          _formulario(),
+          // _formulario(),
           _botoes(),
         ],
       ),
