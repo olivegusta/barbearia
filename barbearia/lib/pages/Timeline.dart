@@ -42,69 +42,35 @@ class _TimelinePageState extends State<TimelinePage> {
   }
 
   Widget corpo() {
-    return Container(
-      padding: EdgeInsets.symmetric(
-          horizontal: setWidth(24), vertical: setHeight(24)),
-      // color: AppConsts.backgroundColor,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          SizedBox(
-            height: setHeight(50),
-          ),
-          // _formulario(),
-          _botoes(),
-        ],
-      ),
+    return Column(
+      //crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        _comentarios(),
+        _comentarios(),
+        _comentarios(),
+        SizedBox(
+            width: 300,
+            height: 300,
+            child: Image.asset('assets/images/logo.png'))
+      ],
     );
   }
 }
 
-Widget _formulario() {
+Widget _comentarios() {
   return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
+    //crossAxisAlignment: CrossAxisAlignment.center,
     children: [
-      labelGenerico("Nome"),
-      _nameContainer(),
-      labelGenerico("Email"),
-      _nameContainer(),
-      // Text("Telefone"),
-      labelGenerico("Data de Nascimento"),
+      Container(
+          width: 400,
+          height: 30,
+          margin: EdgeInsets.all(10.0),
+          alignment: Alignment.topCenter,
+          decoration: BoxDecoration(border: Border.all()),
+          child: Text(
+            'COMENTARIOS',
+            textAlign: TextAlign.left,
+          )),
     ],
-  );
-}
-
-Widget _botoes() {
-  return Column(
-    children: [],
-  );
-  ;
-}
-
-Widget _nameContainer() {
-  return TextFormField(
-    textCapitalization: TextCapitalization.words,
-    textInputAction: TextInputAction.next,
-    controller: _nameCtrl,
-    keyboardType: TextInputType.text,
-    decoration: InputDecoration(
-      enabledBorder: UnderlineInputBorder(
-        borderSide: BorderSide(color: Colors.white),
-      ),
-    ),
-    inputFormatters: [
-      FilteringTextInputFormatter.allow(RegExp("[0-9a-zA-Z.ãÃçÇ& ]"))
-    ],
-    validator: (value) {
-      if (value!.isEmpty) {
-        return 'Precisamos de um nome para conta.';
-      } else if (value.length < 5) {
-        return 'Precisamos de no minimo 5 caracteres.';
-      }
-      return null;
-    },
-    onChanged: (value) {
-      print(_nameCtrl.text);
-    },
   );
 }
