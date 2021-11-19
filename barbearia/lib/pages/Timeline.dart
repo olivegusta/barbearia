@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'dart:js';
+import 'package:flutter/src/widgets/navigator.dart';
 
 final TextEditingController _nameCtrl = TextEditingController();
 late DateTime _birthDate;
@@ -43,15 +44,18 @@ class _TimelinePageState extends State<TimelinePage> {
 
   Widget corpo() {
     return Column(
-      //crossAxisAlignment: CrossAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         _comentarios(),
         _comentarios(),
         _comentarios(),
         SizedBox(
-            width: 300,
-            height: 300,
-            child: Image.asset('assets/images/logo.png'))
+            width: 400, height: 400, child: Image.asset("images/cabelo.jpg")),
+        Container(
+          height: 50.0,
+          width: 300.0,
+          child: botao(texto: "Agendar Serviço", action: () {}),
+        ),
       ],
     );
   }
