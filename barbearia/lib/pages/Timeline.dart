@@ -7,10 +7,11 @@ import 'package:barbearia/utils/consts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
-import 'dart:js';
+
 import 'package:flutter/src/widgets/navigator.dart';
 
 final TextEditingController _nameCtrl = TextEditingController();
+
 late DateTime _birthDate;
 
 class TimelinePage extends StatefulWidget {
@@ -54,7 +55,16 @@ class _TimelinePageState extends State<TimelinePage> {
         Container(
           height: 50.0,
           width: 300.0,
-          child: botao(texto: "Agendar Serviço", action: () {}),
+          child: botao(
+              texto: "Agendar Serviço",
+              action: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => agendamentoPage(
+                              nome: '',
+                            )));
+              }),
         ),
       ],
     );

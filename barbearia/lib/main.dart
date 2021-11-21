@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Login ',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -21,8 +22,12 @@ class MyApp extends StatelessWidget {
       initialRoute: '/login',
       routes: {
         '/login': (context) => LoginPage(),
-        '/Timeline': (context) => TimelinePage(nome: "voltar para o login"),
-        '/agendamento': (context) => agendamentoPage(),
+        '/Timeline': (context) => TimelinePage(
+              nome: '',
+            ),
+        '/agendamento': (context) => agendamentoPage(
+              nome: '',
+            ),
 
         //LoginPage.tag: (context) => LoginPage(),
       },
