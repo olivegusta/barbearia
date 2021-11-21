@@ -1,6 +1,6 @@
-import 'package:date_picker_example/widget/button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:barbearia/pages/widgets/button_widget.dart';
 
 class DatePickerWidget extends StatefulWidget {
   @override
@@ -8,7 +8,7 @@ class DatePickerWidget extends StatefulWidget {
 }
 
 class _DatePickerWidgetState extends State<DatePickerWidget> {
-  DateTime date;
+  late DateTime date;
 
   String getText() {
     if (date == null) {
@@ -30,7 +30,7 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
     final initialDate = DateTime.now();
     final newDate = await showDatePicker(
       context: context,
-      initialDate: date ?? initialDate,
+      initialDate: date,
       firstDate: DateTime(DateTime.now().year - 5),
       lastDate: DateTime(DateTime.now().year + 5),
     );

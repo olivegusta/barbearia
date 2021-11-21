@@ -1,6 +1,6 @@
-import 'package:date_picker_example/widget/button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:barbearia/pages/widgets/button_widget.dart';
 
 class TimePickerWidget extends StatefulWidget {
   @override
@@ -8,7 +8,7 @@ class TimePickerWidget extends StatefulWidget {
 }
 
 class _TimePickerWidgetState extends State<TimePickerWidget> {
-  TimeOfDay time;
+  late TimeOfDay time;
 
   String getText() {
     if (time == null) {
@@ -32,7 +32,7 @@ class _TimePickerWidgetState extends State<TimePickerWidget> {
     final initialTime = TimeOfDay(hour: 9, minute: 0);
     final newTime = await showTimePicker(
       context: context,
-      initialTime: time ?? initialTime,
+      initialTime: time,
     );
 
     if (newTime == null) return;
