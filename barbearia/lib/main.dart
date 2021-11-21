@@ -87,7 +87,7 @@ abstract class _MainPageState extends StatefulWidget {
         return Scaffold(
           backgroundColor: Colors.lightBlue,
           body: Padding(
-            padding: EdgeInsets.all(32),
+            padding: EdgeInsets.all(10.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -104,7 +104,7 @@ abstract class _MainPageState extends StatefulWidget {
         return Scaffold(
           backgroundColor: Colors.lightBlue,
           body: Padding(
-            padding: EdgeInsets.all(32),
+            padding: EdgeInsets.all(10),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

@@ -2,6 +2,7 @@ import 'dart:html';
 
 import 'package:barbearia/pages/agendamento.dart';
 import 'package:barbearia/pages/login.dart';
+import 'package:barbearia/pages/meus_agendamentos.dart';
 import 'package:barbearia/utils/common.dart';
 import 'package:barbearia/utils/consts.dart';
 import 'package:flutter/material.dart';

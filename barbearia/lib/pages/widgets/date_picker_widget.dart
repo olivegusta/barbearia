@@ -10,25 +10,25 @@ class DatePickerWidget extends StatefulWidget {
 class _DatePickerWidgetState extends State<DatePickerWidget> {
   late DateTime date;
 
-  String getText() {
-    if (date == null) {
-      return 'Select Date';
-    } else {
-      return DateFormat('MM/dd/yyyy').format(date);
-      // return '${date.month}/${date.day}/${date.year}';
-    }
-  }
+  // String getText() {
+  // if (date == null) {
+  //    return 'Select Date';
+  //  } else {
+  //   //return DateFormat('MM/dd/yyyy').format(date);
+  //    return '${date.month}/${date.day}/${date.year}';
+  //  }
+  //}
 
   @override
   Widget build(BuildContext context) => ButtonHeaderWidget(
         title: 'Date',
-        text: getText(),
+        text: ('Selecione a data'),
         onClicked: () => pickDate(context),
       );
 
-  Future pickDate(BuildContext context) async {
+  pickDate(BuildContext context) {
     final initialDate = DateTime.now();
-    final newDate = await showDatePicker(
+    final newDate = showDatePicker(
       context: context,
       initialDate: date,
       firstDate: DateTime(DateTime.now().year - 5),
@@ -37,6 +37,6 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
 
     if (newDate == null) return;
 
-    setState(() => date = newDate);
+    setState(() => date = newDate as DateTime);
   }
 }
