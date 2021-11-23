@@ -2,6 +2,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:intl/date_symbol_data_http_request.dart';
 
 import 'consts.dart';
 
@@ -86,4 +88,12 @@ Widget labelGenerico(String string, {Color? textColor}) {
       style: textStyle,
     ),
   );
+}
+
+String formatDateToLocale(DateTime value) {
+  if (value != null) {
+    return DateFormat.yMMMMd("pt_BR").format(value);
+  } else {
+    return " _ ";
+  }
 }

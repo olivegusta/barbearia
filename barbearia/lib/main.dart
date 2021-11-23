@@ -9,16 +9,13 @@ import 'package:barbearia/pages/widgets/date_range_picker_widget.dart';
 import 'package:barbearia/pages/widgets/datetime_picker_widget.dart';
 import 'package:barbearia/pages/widgets/time_picker_widget.dart';
 import 'package:flutter/services.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
-Future main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-    DeviceOrientation.portraitDown,
-  ]);
-
-  runApp(MyApp());
+void main() {
+  initializeDateFormatting().then((_) => runApp(MyApp()));
 }
+
+late DateTime _dataInfo;
 
 int index = 0;
 

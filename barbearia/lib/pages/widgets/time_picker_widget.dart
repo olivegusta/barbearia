@@ -28,15 +28,15 @@ class _TimePickerWidgetState extends State<TimePickerWidget> {
         onClicked: () => (context),
       );
 
-  //Future pickTime(BuildContext context) async {
-  //final initialTime = TimeOfDay(hour: 9, minute: 0);
-  // final newTime = await showTimePicker(
-  //  context: context,
-  //  initialTime: time,
-  // );
+  Future pickTime(BuildContext context) async {
+    final dtPick = await showDatePicker(
+        context: context,
+        initialDate: new DateTime.now(),
+        firstDate: new DateTime(2000),
+        lastDate: new DateTime(2100));
 
-  //  if (newTime == null) return;
+    if (dtPick == null) return;
 
-  // setState(() => time = newTime);
-  //}
+    setState(() => time = dtPick as TimeOfDay);
+  }
 }
