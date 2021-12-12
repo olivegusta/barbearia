@@ -1,4 +1,4 @@
-import 'package:barbearia/pages/Home.dart';
+import 'package:barbearia/pages/home.dart';
 import 'package:barbearia/pages/login.dart';
 import 'package:barbearia/utils/consts.dart';
 import 'package:flutter/material.dart';
@@ -11,10 +11,7 @@ void main() {
 
 late DateTime _dataInfo;
 
-int index = 0;
-
 class MyApp extends StatelessWidget {
-  static final String title = 'Date (Range) & Time';
   const MyApp({Key? key}) : super(key: key);
 
   @override
@@ -28,6 +25,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/login',
       routes: {
         '/login': (context) => LoginPage(),
+        '/home': (context) => MyhomePage(),
       },
     );
   }

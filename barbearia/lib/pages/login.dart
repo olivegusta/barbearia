@@ -4,11 +4,7 @@ import 'package:barbearia/utils/consts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-final TextEditingController _nameCtrl = TextEditingController();
-late DateTime _birthDate;
-
 class LoginPage extends StatefulWidget {
-  static String tag = 'cadastro';
   const LoginPage({key}) : super(key: key);
 
   @override
@@ -40,8 +36,12 @@ class _LoginPageState extends State<LoginPage> {
           height: 50.0,
           width: 120.0,
           child: botao(
-            texto: "entrar",
-          ),
+              texto: "entrar",
+              action: ({
+                MaterialPageRoute(
+                  builder: (context) => MyhomePage(),
+                )
+              })),
         ),
       ],
     );
