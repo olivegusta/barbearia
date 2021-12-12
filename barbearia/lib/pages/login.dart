@@ -1,9 +1,7 @@
-//import 'package:barbearia/pages/calander.dart';
-import 'package:barbearia/pages/agendamento.dart';
+import 'package:barbearia/pages/home.dart';
 import 'package:barbearia/utils/common.dart';
 import 'package:barbearia/utils/consts.dart';
 import 'package:flutter/material.dart';
-import 'package:barbearia/pages/Timeline.dart';
 import 'package:flutter/services.dart';
 
 final TextEditingController _nameCtrl = TextEditingController();
@@ -42,16 +40,8 @@ class _LoginPageState extends State<LoginPage> {
           height: 50.0,
           width: 120.0,
           child: botao(
-              texto: "entrar",
-              action: () {
-                Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(
-                    builder: (context) => TimelinePage(
-                      nome: '',
-                    ),
-                  ),
-                );
-              }),
+            texto: "entrar",
+          ),
         ),
       ],
     );
@@ -91,35 +81,4 @@ Widget _nameContainer() {
       )
     ],
   );
-}
-
-Widget _formula() {
-  return Scaffold(
-      backgroundColor: Colors.amberAccent,
-      body: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Center(
-          child: Column(
-            children: <Widget>[
-              TextField(
-                  autofocus: true,
-                  keyboardType: TextInputType.number,
-                  style: TextStyle(color: Colors.blue, fontSize: 12),
-                  decoration: InputDecoration(
-                    labelText: "Telefone do usuário",
-                    labelStyle: TextStyle(color: Colors.black),
-                  )), //TextField
-              TextField(
-                  autofocus: true,
-                  obscureText: true,
-                  keyboardType: TextInputType.text,
-                  style: TextStyle(color: Colors.blue, fontSize: 30),
-                  decoration: InputDecoration(
-                    labelText: "Senha do usuário",
-                    labelStyle: TextStyle(color: Colors.black),
-                  )), //TextField
-            ],
-          ),
-        ),
-      ));
 }
