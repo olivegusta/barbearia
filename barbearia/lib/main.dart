@@ -1,15 +1,14 @@
 import 'package:barbearia/pages/home.dart';
 import 'package:barbearia/pages/login.dart';
-import 'package:barbearia/utils/consts.dart';
 import 'package:flutter/material.dart';
+import 'package:table_calendar/table_calendar.dart';
+//import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/date_symbol_data_local.dart';
 
 void main() {
   initializeDateFormatting().then((_) => runApp(MyApp()));
 }
-
-late DateTime _dataInfo;
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -24,8 +23,8 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/login',
       routes: {
-        '/login': (context) => LoginPage(),
-        '/home': (context) => MyhomePage(),
+        '/login': (context) => const LoginPage(),
+        '/home': (context) => const MyhomePage(),
       },
     );
   }

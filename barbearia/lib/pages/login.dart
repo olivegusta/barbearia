@@ -1,3 +1,5 @@
+//import 'dart:js';
+
 import 'package:barbearia/pages/home.dart';
 import 'package:barbearia/utils/common.dart';
 import 'package:barbearia/utils/consts.dart';
@@ -32,17 +34,9 @@ class _LoginPageState extends State<LoginPage> {
               'https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/profile/photos/8401079/original/videozed-logo_600x600_00000.png'),
         ),
         _nameContainer(),
-        Container(
-          height: 50.0,
-          width: 120.0,
-          child: botao(
-              texto: "entrar",
-              action: ({
-                MaterialPageRoute(
-                  builder: (context) => MyhomePage(),
-                )
-              })),
-        ),
+        RaisedButton(
+            child: Text("Entrar"),
+            onPressed: () => Navigator.pushNamed(context, '/home')),
       ],
     );
   }
