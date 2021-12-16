@@ -33,10 +33,17 @@ class _LoginPageState extends State<LoginPage> {
           child: Image.network(
               'https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/profile/photos/8401079/original/videozed-logo_600x600_00000.png'),
         ),
+        botao(
+            texto: 'Entrar',
+            action: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => MyhomePage()));
+            }),
         _nameContainer(),
-        RaisedButton(
-            child: Text("Entrar"),
-            onPressed: () => Navigator.pushNamed(context, '/home')),
+
+        //  RaisedButton(
+        // child: Text("Entrar"),
+        //  onPressed: () => Navigator.pushNamed(context, '/home')),
       ],
     );
   }
